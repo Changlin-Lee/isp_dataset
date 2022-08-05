@@ -16,7 +16,7 @@ Please follow the pwcnet-pytorch implementation at first.
 $ pip install -r requirements.txt
 ```
 
-## Align the patches
+## Align the patches by the following procedure
 ```
 $ python alignment_refine_sift.py
 $ python alignment_refine_flow.py
