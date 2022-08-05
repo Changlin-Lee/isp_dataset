@@ -21,10 +21,8 @@ parser = argparse.ArgumentParser(description="training codes")
 
 parser.add_argument("--data_path", type=str, default=data_path,
                     help="Path to unrectified images.")
-
 parser.add_argument("--camera", type=str, default="iPhone", choices=["iPhone", "Mi"], 
                     help="Path to unrectified images.")
-
 parser.add_argument("--date", type=str,
                     help="Which date to align.")
 
@@ -104,8 +102,6 @@ def flow_refine(im1, im2):
     # ---- calculate mean distance ----
     mean_dis = cal_mean_distance(flo)
     return mean_dis
-
-
 
 if __name__ == '__main__':
     rgb_folders = sorted(glob(args.data_path+"alignment_128/%s/%s/rgb/DSC*"%(args.camera,args.date)))

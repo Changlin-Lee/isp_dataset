@@ -11,7 +11,6 @@ from imageio import imwrite
 MAX_FEATURES = 10000
 GOOD_MATCH_PERCENT = 0.15
 
-
 parser = argparse.ArgumentParser(description="training codes")
 parser.add_argument("--data_path", type=str, default=data_path,
                     help="Path to unrectified images.")
@@ -22,7 +21,6 @@ parser.add_argument("--camera", type=str, default="iPhone", choices=["iPhone", "
 parser.add_argument("--date", type=str,
                     help="Which date to align.")
 args = parser.parse_args()
-
 
 def cal_mean_distance(kp1, kp2):
     # kp1, kp2: (N, 2)
@@ -77,7 +75,6 @@ def alignImages_sift(im1, im2):
 
         height, width, channels = im2.shape
         im1Reg = cv2.warpPerspective(im1, M, (width, height))
-
 
     else:
         print("Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT))

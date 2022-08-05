@@ -14,13 +14,10 @@ parser = argparse.ArgumentParser(description="training codes")
 
 parser.add_argument("--data_path", type=str, default=data_path,
                     help="Path to unrectified images.")
-
 parser.add_argument("--camera", type=str, default="iPhone", choices=["iPhone", "Mi"], 
                     help="Path to unrectified images.")
-
 parser.add_argument("--date", type=str,
                     help="Which date to align.")
-
 args = parser.parse_args()
 
 
